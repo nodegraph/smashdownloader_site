@@ -1,61 +1,254 @@
 <!DOCTYPE html>
-<html>
-
-
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-<style type="text/css">
-html, body, #wrapper {
-   height:100%;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   border: 0;
-}
-#wrapper td {
-   vertical-align: middle;
-   text-align: center;
-}
+    <title>Smash Downloader</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        window.onload = function () {
+            var username = "support";
+            var hostname = "smashdownloader.com";
+            var link_text = username + "@" + hostname ;
 
-.open-sans-font{
-  font-family: 'Open Sans', sans-serif;
-}
+            // Inject support address.
+            var anchor = document.createElement('a');
+            var anchor_text = document.createTextNode(link_text);
+            anchor.appendChild(anchor_text)
+            anchor.href = "mail" + "to:" + username + "@" + hostname
+            document.getElementById('smashdownloader_contact').appendChild(anchor);
+        }
+    </script>
+</head> 
 
-.centered-image {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 200px;
-   height: 200px;
-   margin-top: -100px; /* Half the height */
-   margin-left: -100px; /* Half the width */
-}
-
-</style>
-</head>
-
-
-
-<body bgcolor="#03A9F4">
-	<!-- 
-	<table id="wrapper">
-		<tr>
-			<td><img src="octopus_white.png" alt="www.smashbrowse.com" /></td>
-		</tr>
-	</table>
-	 -->
-	 
-	<img class="centered-image" src="octopus_white.png" alt="www.smashbrowse.com" />
-
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-
-	<!-- 
-	<center>
-		<h1 class="open-sans-font" style="color: white; position: absolute; top: 70%; left: 0; right: 0;">right click for menu</h1>
-	</center>
-	-->
-	
+<body data-spy="scroll">
+    
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">            
+            <h1 class="logo pull-left">
+                <a class="scrollto" href="#promo">
+                    <span class="logo-title">Smash Downloader</span>
+                </a>
+            </h1><!--//logo-->              
+            <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->            
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#download">Download</a></li>                        
+                        <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div>
+    </header><!--//header-->
+    
+    <!-- ******PROMO****** -->
+    <section id="promo" class="promo section offset-header">
+        <div class="container text-center image-center">
+             
+            <img src="assets/images/logo_150x150.png" alt="" />
+            <p>  </p>
+            <h2 class="title">Smash Downloader</h2>
+            <p class="intro">Drag and drop videos from websites. </p>
+            <center>
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/bMTVVuLf39U?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </center>
+            <!-- <div class="btns">
+                <a class="btn btn-cta-primary" href="https://youtu.be/bMTVVuLf39U" target="_blank">Demo</a>
+            </div> -->
+            <section id="videos">
+            <ul class="meta list-inline">
+                <!-- <a class="btn btn-cta-secondary" href="http://www.google.com" target="_blank">Gettings News Posts Demo</a> -->
+                <!-- <a class="btn btn-cta-secondary" href="http://www.google.com" target="_blank">Browsing Videos Demo</a> -->
+                <!-- <a class="btn btn-cta-secondary" href="http://www.google.com" target="_blank">Checking Prices Demo</a> -->
+            </ul><!--//meta-->
+            </section>
+        </div><!--//container-->
+        <div class="social-media">
+            <div class="social-media-inner container text-center">
+                <div class="container text-center">
+                <medium class="copyright">download every video  <i class="fa fa-thumbs-up"></i></medium>
+                </footer>
+            </div>
+        </div>
+    </section><!--//promo-->
+    
+    <!-- ******ABOUT****** --> 
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="title text-center">What is Smash Downloader?</h2>
+            <center>
+            <p class="intro ">Smash Downloader makes downloading videos simple. <br/> Just drag and drop video thumbnails and links onto Smash Downloader.<br/><br/> </p>
+            </center>
+            <div class="row">
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Video and Audio Quality</h3>
+                        <p>Smash Downloader downloads the largest video resolution and best audio samples and merges them.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Save Time</h3>
+                        <p>Simply drag and drop and then spend more time doing what you love.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-crosshairs"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Smart Caching</h3>
+                        <p>If a video has already been downloaded it won't be downloaded again. It will also continue interrupted downloads.</p>
+                    </div><!--//content-->
+                </div><!--//item-->           
+                <div class="clearfix visible-md"></div>    
+            </div><!--//row-->            
+        </div><!--//container-->
+    </section><!--//about-->
+    
+    
+    <!-- ******Download****** --> 
+    <section id="download" class="license section">
+        <div class="container">
+            <div class="license-inner">
+            <h2 class="title text-center">Download</h2>
+                <div class="info">
+                    <p> </p>
+                </div><!--//info-->
+                <div class="cta-container">
+                    <div class="speech-bubble">                    
+                        <p class="intro">Smash Downloader comes in two versions. 
+                        <p><strong>Lite</strong>
+                            <ul>
+                                <li>100% free</li> 
+                                <li>does not expire</li>
+                                <li>no ads</li>
+                                <li>no parallel video downloads</li>
+                                <li>fixed download directory</li>
+                            </ul>
+                        </p> 
+                        <p><strong>Pro</strong>
+                            <ul>
+                                <li>$19.99</li>
+                                <li>does not expire</li>
+                                <li>no ads</li>
+                                <li>unlimited parallel video downloads</li>
+                                <li>customizable download directory</li>
+                            </ul>
+                        </p>
+                        <strong>Requirements:</strong>: Windows 64 bit, or OS X, or macOS.  </p>
+                    </div><!--//speech-bubble-->
+                    <div class="text-center">
+                        <p><a class="btn btn-cta-primary" href="./windows/smashdownloader.exe">LITE - windows 64bit</a></p>
+                        <p><a class="btn btn-cta-primary" href="./macos/smashdownloader.dmg">LITE - mac 64bit</a></p>
+                        <p><a class="btn btn-cta-primary" href="https://gum.co/mrsyb" target="_blank">PRO - windows 64bit</a></p>
+                        <p><a class="btn btn-cta-primary" href="https://gum.co/bHYBo" target="_blank">PRO - mac 64bit</a></p>
+                        <!-- <p><strong><a href="https://gum.co/QbCCX/lite" target="_blank">Smash Browse LITE</a> </strong> </p> -->
+                        <!-- <p><strong><a href="https://gum.co/tgctL" target="_blank">Smash Browse PRO</a> </strong> </p> -->
+                    </div><!--//btn-container-->
+                </div><!--//cta-container-->
+            </div><!--//license-inner-->
+        </div><!--//container-->
+    </section><!--//how-->
+    
+    <!-- ******CONTACT****** --> 
+    <section id="contact" class="contact section has-pattern">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center">Contact</h2>
+                <p class="intro  text-center">Please do not hesitate to contact us. </p>
+                <div class="author-message">                      
+                    <div class="profile">
+                        <img class="img-responsive" src="assets/images/logo_150x150.png" alt="" />
+                    </div><!--//profile-->
+                    <div class="speech-bubble">
+                        <h3 class="sub-title">Found a bug or want to request a new feature?</h3>
+                        <p>Please contact us directly below. In the future, we will have a bug and feature request site.</a> 
+                    </div><!--//speech-bubble-->     
+                    <div class="speech-bubble">
+                        <h3 class="sub-title">Want to contact us directly?</h3>
+                        <p id=smashdownloader_contact>Contact us directly via email:  </p> 
+                    </div><!--//speech-bubble-->     
+                    <div class="speech-bubble">
+                        <h3 class="sub-title">Have questions about your purchase transaction?</h3>
+                        <p>Please visit our transaction partner:  <a href="http://help.gumroad.com/common-customer-issues" target="_blank">Common Purchase Issues</a> 
+                        <div class="source">
+                            <span class="name">We look forward to hearing from you.</a></span>
+                            <br/>
+                            <span class="name">Smash Downloader Team</a></span>
+                            <br/>
+                            <span class="title">Los Angeles, California</span>
+                        </div><!--//source-->
+                    </div><!--//speech-bubble-->     
+                </div><!--//author-message-->
+                <div class="clearfix"></div>
+                <div class="info text-center">
+                </div><!--//info-->
+            </div><!--//contact-inner-->
+        </div><!--//container-->
+    </section><!--//contact-->  
+      
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <medium class="copyright">download every video <i class="fa fa-thumbs-up"></i></medium>
+        </div><!--//container-->
+    </footer><!--//footer-->
+     
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>   
+    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>   
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>       
 </body>
+</html> 
 
-
-
-</html>
